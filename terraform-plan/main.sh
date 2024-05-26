@@ -13,7 +13,7 @@ if [ "${DESTROY:-}" = true ]; then
 fi
 set +e
 tfcmt -var "target:$TFACTION_TARGET" -var "destroy:${DESTROY:-}" plan -- \
-	"$TF_COMMAND" plan -no-color -detailed-exitcode -out "${TF_PLAN_PATH}/tfplan.binary" -input=false $opts
+	"$TF_COMMAND" plan -no-color -detailed-exitcode -out "${TF_PLAN_PATH}tfplan.binary" -input=false $opts
 code=$?
 set -e
 
