@@ -37,6 +37,7 @@ runs:
         DESTROY: ${{ steps.target-config.outputs.destroy }}
         CONFTEST_POLICY_DIRECTORY: ${{ steps.global-config.outputs.conftest_policy_directory }}
         TF_COMMAND: ${{ steps.target-config.outputs.terraform_command }}
+        TF_PLAN_PATH: ${{ env.TF_PLAN_PATH }}
 
     - run: echo "value=terraform_plan_file_${TFACTION_TARGET//\//__}" >> "$GITHUB_OUTPUT"
       id: artifact_name
