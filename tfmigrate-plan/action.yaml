@@ -11,11 +11,15 @@ inputs:
 runs:
   using: composite
   steps:
-    - uses: suzuki-shunsuke/tfaction/get-global-config@main
+    - uses: suzuki-shunsuke/tfaction/js@main
       id: global-config
-    - uses: suzuki-shunsuke/tfaction/get-target-config@main
+      with:
+        action: get-global-config
+    - uses: suzuki-shunsuke/tfaction/js@main
       id: target-config
-    - run: bash ${{ github.action_path }}/main.sh
+      with:
+        action: get-target-config
+    - run: bash "$GITHUB_ACTION_PATH/main.sh"
       working-directory: ${{ steps.target-config.outputs.working_directory }}
       shell: bash
       env:
@@ -27,3 +31,7 @@ runs:
         GCS_BUCKET_NAME_TFMIGRATE_HISTORY: ${{ steps.target-config.outputs.gcs_bucket_name_tfmigrate_history }}
         CONFTEST_POLICY_DIRECTORY: ${{ steps.global-config.outputs.conftest_policy_directory }}
         TF_COMMAND: ${{ steps.global-config.outputs.terraform_command }}
+    - uses: suzuki-shunsuke/tfaction/conftest@main
+      with:
+        plan: "true"
+        github_token: ${{inputs.github_token}}

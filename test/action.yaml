@@ -11,8 +11,23 @@ inputs:
 runs:
   using: composite
   steps:
-    - uses: suzuki-shunsuke/tfaction/get-target-config@main
+    - uses: suzuki-shunsuke/tfaction/js@main
       id: target-config
+      with:
+        action: get-target-config
+    - uses: suzuki-shunsuke/tfaction/js@main
+      id: global-config
+      with:
+        action: get-global-config
+
+    - shell: bash
+      id: action_path
+      run: echo "value=$GITHUB_ACTION_PATH" >> "$GITHUB_OUTPUT"
+    - uses: suzuki-shunsuke/tfaction/conftest@main
+      with:
+        github_token: ${{ inputs.github_token }}
+      env:
+        GH_COMMENT_CONFIG: ${{ steps.action_path.outputs.value }}/github-comment.yaml
 
     - name: terraform validate
       run: |
@@ -22,6 +37,7 @@ runs:
           -var "tfaction_target:${TFACTION_TARGET}" \
           -- "$TF_COMMAND" validate
       working-directory: ${{ steps.target-config.outputs.working_directory }}
+      if: steps.target-config.outputs.destroy != 'true'
       shell: bash
       env:
         GITHUB_TOKEN: ${{ inputs.github_token }}
@@ -43,17 +59,24 @@ runs:
         ignore_hcl_errors: "true"
 
     # deep check requires AWS credentials
-    - uses: suzuki-shunsuke/github-action-tflint@0b7fbc35b0d512749f35c3036df57c3a95d3e9e1 # v1.1.0
+    - uses: suzuki-shunsuke/github-action-tflint@a9d1f3376c8bbd6aadf4891dfe32f5e246c9c52f # v1.2.1
       if: fromJSON(steps.target-config.outputs.enable_tflint) && steps.target-config.outputs.destroy != 'true'
       with:
         github_token: ${{ inputs.github_token }}
         working_directory: ${{ steps.target-config.outputs.working_directory }}
         github_comment: "true"
+        fix: ${{ steps.target-config.outputs.tflint_fix == 'true' }}
 
-    - uses: suzuki-shunsuke/github-action-terraform-fmt@388ce9deea65edd9a9a3a60bee140732c3dad7a2 # v0.2.1
+    - uses: suzuki-shunsuke/github-action-terraform-fmt@bdc85c3536e31ae189339cc09c5a0f9768d0ffa7 # v0.2.2
       if: steps.target-config.outputs.destroy != 'true'
       with:
         working_directory: ${{ steps.target-config.outputs.working_directory }}
         github_token: ${{ inputs.github_token }}
         skip_push: ${{ github.event_name != 'pull_request' && ! startsWith(github.event_name, 'pull_request_') }}
         terraform_command: ${{ steps.target-config.outputs.terraform_command }}
+
+    - uses: suzuki-shunsuke/tfaction/terraform-docs@main
+      if: fromJSON(steps.target-config.outputs.enable_terraform_docs) && steps.target-config.outputs.destroy != 'true'
+      with:
+        github_token: ${{ inputs.github_token }}
+        working_directory: ${{ steps.target-config.outputs.working_directory }}

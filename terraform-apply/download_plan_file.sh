@@ -2,6 +2,10 @@
 
 set -euo pipefail
 
+if [ "${TFACTION_DEBUG:-}" = true ]; then
+	set -x
+fi
+
 filename=tfplan.binary
 artifact_name=terraform_plan_file_${TFACTION_TARGET//\//__}
 branch=$CI_INFO_HEAD_REF
@@ -16,7 +20,7 @@ github-comment exec -- gh version
 pr_head_sha=$(jq -r ".head.sha" "$CI_INFO_TEMP_DIR/pr.json")
 
 # https://github.com/suzuki-shunsuke/tfaction/pull/1570#issuecomment-1987382651
-# We don't use gh run list's -c option because 
+# We don't use gh run list's -c option because
 # 1. this requires GitHub CLI v2.40.0 or newer
 # 2. we should check the latest workflow run
 body=$(github-comment exec \

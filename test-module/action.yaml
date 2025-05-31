@@ -11,8 +11,16 @@ inputs:
 runs:
   using: composite
   steps:
-    - uses: suzuki-shunsuke/tfaction/get-global-config@main
+    - uses: suzuki-shunsuke/tfaction/js@main
       id: global-config
+      with:
+        action: get-global-config
+
+    # TODO Run conftest on modules
+    # https://github.com/suzuki-shunsuke/tfaction/issues/1908#issuecomment-2415572321
+    # - uses: suzuki-shunsuke/tfaction/conftest@main
+    #   with:
+    #     github_token: ${{ inputs.github_token }}
 
     - run: github-comment exec -- terraform init
       # https://github.com/suzuki-shunsuke/tfaction/issues/1576
@@ -35,25 +43,25 @@ runs:
         working_directory: ${{ env.TFACTION_TARGET }}
         github_comment: "true"
 
-    - uses: suzuki-shunsuke/github-action-tflint@0b7fbc35b0d512749f35c3036df57c3a95d3e9e1 # v1.1.0
+    - uses: suzuki-shunsuke/github-action-tflint@a9d1f3376c8bbd6aadf4891dfe32f5e246c9c52f # v1.2.1
       if: fromJSON(steps.global-config.outputs.enable_tflint)
       with:
         github_token: ${{ inputs.github_token }}
         working_directory: ${{ env.TFACTION_TARGET }}
         github_comment: "true"
+        fix: ${{ steps.global-config.outputs.tflint_fix == 'true' }}
 
     # Remove .terraform.lock.hcl created by `terraform init` before running terraform-docs
     - run: "! test -f .terraform.lock.hcl || rm .terraform.lock.hcl"
       shell: bash
       working-directory: ${{ env.TFACTION_TARGET }}
 
-    - shell: bash
-      working-directory: ${{ env.TFACTION_TARGET }}
-      env:
-        GITHUB_TOKEN: ${{ inputs.github_token }}
-      run: bash "${GITHUB_ACTION_PATH}/terraform-docs.sh"
+    - uses: suzuki-shunsuke/tfaction/terraform-docs@main
+      with:
+        github_token: ${{ inputs.github_token }}
+        working_directory: ${{ env.TFACTION_TARGET }}
 
-    - uses: suzuki-shunsuke/github-action-terraform-fmt@388ce9deea65edd9a9a3a60bee140732c3dad7a2 # v0.2.1
+    - uses: suzuki-shunsuke/github-action-terraform-fmt@bdc85c3536e31ae189339cc09c5a0f9768d0ffa7 # v0.2.2
       with:
         working_directory: ${{ env.TFACTION_TARGET }}
         github_token: ${{ inputs.github_token }}

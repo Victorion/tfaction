@@ -1,0 +1,294 @@
+{
+  "checksums": [
+    {
+      "id": "github_release/github.com/cli/cli/v2.73.0/gh_2.73.0_linux_amd64.tar.gz",
+      "checksum": "9EBC6B751EE182FDB291CEB2213CC17ABB1624B30F6D7A3913097AF41F48B1B4",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/cli/cli/v2.73.0/gh_2.73.0_linux_arm64.tar.gz",
+      "checksum": "CC2FC6A3CE9D00435A8BCEEBF89C37BFF8A773C5EF2D74203F6F5CE4FB10D66A",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/cli/cli/v2.73.0/gh_2.73.0_macOS_amd64.zip",
+      "checksum": "E46276DD8983F453040746A4342D3AEE088B5CD8F458DD604F3B5EEDF4CD24D9",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/cli/cli/v2.73.0/gh_2.73.0_macOS_arm64.zip",
+      "checksum": "160F290AEE71A9219EA0895B4664E93071FDB3FC6D6E607156C0C2AD5D0D4714",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/cli/cli/v2.73.0/gh_2.73.0_windows_amd64.zip",
+      "checksum": "859632F2B76AFAC38BF3243F5B11423CED935E10B7932B888807AE4E958D5056",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/cli/cli/v2.73.0/gh_2.73.0_windows_arm64.zip",
+      "checksum": "21473B598AC7D127053AAFA0DD79424711CC0AC16BEAEEB4E864A945828566D7",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/int128/ghcp/v1.13.5/ghcp_darwin_amd64.zip",
+      "checksum": "6728BD668888A64C71BF01D9AFBA373F38D353B79D181B1401A4E5E4B329289D",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/int128/ghcp/v1.13.5/ghcp_darwin_arm64.zip",
+      "checksum": "6533FA0396CA6F4B9D3A74C2F0A5C4C89575A0D79F90684BAF6CD8B1511C95AC",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/int128/ghcp/v1.13.5/ghcp_linux_amd64.zip",
+      "checksum": "3C808E566F0B663182AD5B5DD6E6B05DC8346610EA5613EA8C22AB19F47A4493",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/int128/ghcp/v1.13.5/ghcp_linux_arm64.zip",
+      "checksum": "14068BF35B2ED187EE7D8DB854DF2E7913C2BBC981979D3F8AE533D058E35F16",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/int128/ghcp/v1.13.5/ghcp_windows_amd64.zip",
+      "checksum": "1A90AD7927F720EB8996AE143DF5D7AA2DF70689B7B5B9074D6FD32C244D688E",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/minamijoyo/tfmigrate/v0.4.2/tfmigrate_0.4.2_darwin_amd64.tar.gz",
+      "checksum": "DF2B26CF577D5BBF6DC9F5336B68485502B70E9384D0EACE01662309BB76FDCD",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/minamijoyo/tfmigrate/v0.4.2/tfmigrate_0.4.2_darwin_arm64.tar.gz",
+      "checksum": "B1BA9612B561122AD5817CEED164F8EFCF62BDD26217AAA6823D6BCB68FBC92A",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/minamijoyo/tfmigrate/v0.4.2/tfmigrate_0.4.2_linux_amd64.tar.gz",
+      "checksum": "5B5849B2F31FE9D1134E281C3B0A79FB0628F5CCABED43591B338F48E5914F63",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/minamijoyo/tfmigrate/v0.4.2/tfmigrate_0.4.2_linux_arm64.tar.gz",
+      "checksum": "DBBD476A0A2B9F9183C97EB3D776EB8C83E121B4DDE69A3422391A5FD152020B",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/open-policy-agent/conftest/v0.60.0/conftest_0.60.0_Darwin_arm64.tar.gz",
+      "checksum": "1B75EBACAED44E7EBEBC5DC4D4E0240C00CE4F983244CB31EC6C27EF3CD01E65",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/open-policy-agent/conftest/v0.60.0/conftest_0.60.0_Darwin_x86_64.tar.gz",
+      "checksum": "2B6BD65B099FF859F18F9983127A86D42F30B8371527E6BC6EC750F9DA28236E",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/open-policy-agent/conftest/v0.60.0/conftest_0.60.0_Linux_arm64.tar.gz",
+      "checksum": "C14019EAFE91EC9D7BD82A45933E8A39D3976E11D62F72C6651273E53FCF8D94",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/open-policy-agent/conftest/v0.60.0/conftest_0.60.0_Linux_x86_64.tar.gz",
+      "checksum": "77D3CCFC66ED5722014D1A96A6B0F21376E74B8FEFEC1374F4CA28DECC45CC92",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/open-policy-agent/conftest/v0.60.0/conftest_0.60.0_Windows_arm64.zip",
+      "checksum": "0520F15739D80EFA4B317EE9520DD4DF866104E1FE893F9917D3FF720FB6721E",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/open-policy-agent/conftest/v0.60.0/conftest_0.60.0_Windows_x86_64.zip",
+      "checksum": "2DD535D5B6AB508EF6783E0FF9912EA9D7B5BBDF1639012B908FA30A9E31D8CA",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/reviewdog/reviewdog/v0.20.3/reviewdog_0.20.3_Darwin_arm64.tar.gz",
+      "checksum": "A7FBF41913CE5B6F1872D10C136139B7A849190F4F1F0DC1ED4BF74C636F22A2",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/reviewdog/reviewdog/v0.20.3/reviewdog_0.20.3_Darwin_x86_64.tar.gz",
+      "checksum": "056DD0F43ECCB8651FB976B43AA91A1D34B2A0C3934F216997774A7CBC1F7EB1",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/reviewdog/reviewdog/v0.20.3/reviewdog_0.20.3_Linux_arm64.tar.gz",
+      "checksum": "BD0C4045B8F367F1CA6C0E7CFD80189CCD2A8CEAA22034ECBAD4AF0ACB3A3B82",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/reviewdog/reviewdog/v0.20.3/reviewdog_0.20.3_Linux_x86_64.tar.gz",
+      "checksum": "2C634DBC00BD4A86E4D4C47029D2AF9185FAB06643A9DF0AE10E7C4D644781B6",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/reviewdog/reviewdog/v0.20.3/reviewdog_0.20.3_Windows_arm64.tar.gz",
+      "checksum": "2DFD2C151AFF8B7D2DFDFC44FB47706667806AEA92F4F8238932BB89A0461D4A",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/reviewdog/reviewdog/v0.20.3/reviewdog_0.20.3_Windows_x86_64.tar.gz",
+      "checksum": "068726CA98BBEB5E47378AB0B630133741E17BA1FEB5654A24EC5E604446EDEF",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/suzuki-shunsuke/ci-info/v2.3.2/ci-info_2.3.2_darwin_amd64.tar.gz",
+      "checksum": "36A12C7598513E5C9405BC61EEE1EA78AFF4F7A07033815C3FCE32CBF77C4CE5",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/suzuki-shunsuke/ci-info/v2.3.2/ci-info_2.3.2_darwin_arm64.tar.gz",
+      "checksum": "40BE50A5B11C7467DD5A37AB75A2C87F21D8A0BC45FA529EA87812BA64D97140",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/suzuki-shunsuke/ci-info/v2.3.2/ci-info_2.3.2_linux_amd64.tar.gz",
+      "checksum": "F39DA9A1F7A488E675C649030A8911DC057E835BBEE25CEE2BC3846947665AE2",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/suzuki-shunsuke/ci-info/v2.3.2/ci-info_2.3.2_linux_arm64.tar.gz",
+      "checksum": "7AFCA91B9A278D0F63F0B7D4920AB224C6BB52C69CDE2AB41440E48901AEF273",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/suzuki-shunsuke/ci-info/v2.3.2/ci-info_2.3.2_windows_amd64.tar.gz",
+      "checksum": "559897A9131FD4048D3F740F8551B7AFE6FD4BCFF1901AC31FC746BC2EA6B99B",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/suzuki-shunsuke/ci-info/v2.3.2/ci-info_2.3.2_windows_arm64.tar.gz",
+      "checksum": "EDCB7574DAAE5931652CC4211D0819282441A4DD19F37BE825E29B58EE4A30BD",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/suzuki-shunsuke/github-comment/v6.3.2/github-comment_6.3.2_darwin_amd64.tar.gz",
+      "checksum": "99B363EE8FA1C7EBB75A3F8FB401460F8E2E284AC066D7EFD51CF11ACD2F5689",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/suzuki-shunsuke/github-comment/v6.3.2/github-comment_6.3.2_darwin_arm64.tar.gz",
+      "checksum": "A5160FC9038F3C80294B5C19CED485835A411FD2A7F29DD1A0DA2F64EE3ACD54",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/suzuki-shunsuke/github-comment/v6.3.2/github-comment_6.3.2_linux_amd64.tar.gz",
+      "checksum": "433AC73EA420410E7A9721334A70F62FEA28207E6FE1F803349771C49E803EC6",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/suzuki-shunsuke/github-comment/v6.3.2/github-comment_6.3.2_linux_arm64.tar.gz",
+      "checksum": "4B4F8C185358ED18C31F070C1AA5711B0A16FD50A731A4E6E30C0EC8AA2A0A47",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/suzuki-shunsuke/github-comment/v6.3.2/github-comment_6.3.2_windows_amd64.tar.gz",
+      "checksum": "B09DBC77FF56794A5FFF78A1F553A01E98D0BD94BF9229654ABED58140B37C7A",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/suzuki-shunsuke/github-comment/v6.3.2/github-comment_6.3.2_windows_arm64.tar.gz",
+      "checksum": "9EF90CD9EDFCB2562E32AA9CF8019E2B4F20C040068939CBAC489B15AD448BA0",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/suzuki-shunsuke/tfaction-go/v0.2.3/tfaction_darwin_amd64.tar.gz",
+      "checksum": "A8117CEA55EFFFD2468FA81B856A447634F0D1A72FE81254765F08270A282A7D",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/suzuki-shunsuke/tfaction-go/v0.2.3/tfaction_darwin_arm64.tar.gz",
+      "checksum": "54383EAACAE249CEBB5587B3B0883DDA8DCE2130982B24BA54DD284D983297DF",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/suzuki-shunsuke/tfaction-go/v0.2.3/tfaction_linux_amd64.tar.gz",
+      "checksum": "AEACB544B8A338E845AED69F0B702DF42994EC932099D90B5BCD7801ADF5DF82",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/suzuki-shunsuke/tfaction-go/v0.2.3/tfaction_linux_arm64.tar.gz",
+      "checksum": "570EFD8E3D5B47B675864A805C03603A5233FE21CB766FE3E065852CB8CA112F",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/suzuki-shunsuke/tfaction-go/v0.2.3/tfaction_windows_amd64.tar.gz",
+      "checksum": "903E49D08ECC5ADB86BB143F6F76DEBBDF7A41CADA1FB9AFCAF2D2AC1C9939AE",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/suzuki-shunsuke/tfaction-go/v0.2.3/tfaction_windows_arm64.tar.gz",
+      "checksum": "916C06F5444C84CCE95D7F8CA05E68F657E80224B24CF21B49996B27744448A9",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/suzuki-shunsuke/tfcmt/v4.14.7/tfcmt_darwin_amd64.tar.gz",
+      "checksum": "A7EA0BEE35ED1BC94D033D5B0D186EB0B827BE7ED44B28BAA0C4E683EC5629CB",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/suzuki-shunsuke/tfcmt/v4.14.7/tfcmt_darwin_arm64.tar.gz",
+      "checksum": "86ED075B5B54AF55C3586B0B6986C3BB3CA49E69FC3CF4AF870A15CD73936531",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/suzuki-shunsuke/tfcmt/v4.14.7/tfcmt_linux_amd64.tar.gz",
+      "checksum": "98FA3AFD6BF7F8DA907665DF814AFB25E56CBE0C36B93D26656C7758E5DE09BC",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/suzuki-shunsuke/tfcmt/v4.14.7/tfcmt_linux_arm64.tar.gz",
+      "checksum": "0A0AEB4BBF4C1FAC5DD5536B91D3FC3D76CFCCC938021DA7E28D595A6FA71FF0",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/suzuki-shunsuke/tfcmt/v4.14.7/tfcmt_windows_amd64.tar.gz",
+      "checksum": "5B8A9B82BC5712C2130529439C283C945EA623CAD72B77189B5FB9E263ABF0D2",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/suzuki-shunsuke/tfcmt/v4.14.7/tfcmt_windows_arm64.tar.gz",
+      "checksum": "5E9EDA56C1885811F4052DAB46D3BFBBFB8893ED1CFB1E023D47FF3CEDDBD76B",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/terraform-docs/terraform-docs/v0.20.0/terraform-docs-v0.20.0-darwin-amd64.tar.gz",
+      "checksum": "8C7EA42429D7F5E3DAE3DE32F3873FDE0419332932549147F40916D3F613B8F7",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/terraform-docs/terraform-docs/v0.20.0/terraform-docs-v0.20.0-darwin-arm64.tar.gz",
+      "checksum": "8723013CFE0369C389F4E6CB6E3CFCA1AEBAEFD67871E349E7547F2201564DAD",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/terraform-docs/terraform-docs/v0.20.0/terraform-docs-v0.20.0-linux-amd64.tar.gz",
+      "checksum": "34AE01772412BB11474E6718EA62113E38FF5964EE570A98C69FAFE3A6DFF286",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/terraform-docs/terraform-docs/v0.20.0/terraform-docs-v0.20.0-linux-arm64.tar.gz",
+      "checksum": "371B4ED983781D1EFDD8F7DE06264BAAC41B1D80927F7FD718C405A303D863A0",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/terraform-docs/terraform-docs/v0.20.0/terraform-docs-v0.20.0-windows-amd64.zip",
+      "checksum": "FB372A26F934DC0E163CA914A5AA99FE13D094B1F64F937EFE9DC79BDDDF05A0",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/terraform-docs/terraform-docs/v0.20.0/terraform-docs-v0.20.0-windows-arm64.zip",
+      "checksum": "1E505EF48AAB1CE00F0F13EFF247AFECAEC57F79A0D7353AF101DE114DE2AAE3",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.374.0/registry.yaml",
+      "checksum": "F6EF8FAE28FDCD869BA071BB763686FA3B117E10F32A414B460924336F83B22B",
+      "algorithm": "sha256"
+    }
+  ]
+}

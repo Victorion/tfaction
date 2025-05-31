@@ -2,7 +2,11 @@
 
 set -euo pipefail
 
-if [ -z "${TFMIGRATE_EXEC_PATH:-}" ] && [ "$TF_COMMAND" != terraform ] ; then
+if [ "${TFACTION_DEBUG:-}" = true ]; then
+	set -x
+fi
+
+if [ -z "${TFMIGRATE_EXEC_PATH:-}" ] && [ "$TF_COMMAND" != terraform ]; then
 	TFMIGRATE_EXEC_PATH=$TF_COMMAND
 fi
 
@@ -36,4 +40,4 @@ github-comment exec \
 	-var "tfaction_target:$TFACTION_TARGET" \
 	-- tfmigrate plan --out tfplan.binary
 
-bash "$GITHUB_ACTION_PATH/conftest.sh"
+github-comment exec -- "$TF_COMMAND" show -json tfplan.binary >tfplan.json

@@ -13,20 +13,30 @@ inputs:
 runs:
   using: composite
   steps:
-    - uses: suzuki-shunsuke/tfaction/get-global-config@main
+    - uses: suzuki-shunsuke/tfaction/js@main
       id: global-config
+      with:
+        action: get-global-config
+    - uses: suzuki-shunsuke/tfaction/js@main
+      id: target-config
+      with:
+        action: get-target-config
 
-    - run: bash ${{ github.action_path }}/skip_create_pr.sh
+    - run: bash "$GITHUB_ACTION_PATH/skip_create_pr.sh"
       shell: bash
       if: "fromJSON(steps.global-config.outputs.skip_create_pr)"
       env:
         GITHUB_TOKEN: ${{ inputs.github_token }}
         TFACTION_TARGET_LABEL_PREFIX: ${{ steps.global-config.outputs.label_prefix_target }}
         TFACTION_DRAFT_PR: ${{ steps.global-config.outputs.draft_pr }}
+        WORKING_DIR: ${{ steps.target-config.outputs.working_directory }}
 
-    - run: bash ${{ github.action_path }}/main.sh
+    - run: bash "$GITHUB_ACTION_PATH/main.sh"
       shell: bash
       if: "!fromJSON(steps.global-config.outputs.skip_create_pr)"
       env:
         GITHUB_TOKEN: ${{ inputs.github_token }}
         TFACTION_DRAFT_PR: ${{ steps.global-config.outputs.draft_pr }}
+        WORKING_DIR: ${{ steps.target-config.outputs.working_directory }}
+        FOLLOW_UP_PR_GROUP_LABEL_PREFIX: ${{ steps.global-config.outputs.follow_up_pr_group_label_prefix }}
+        FOLLOW_UP_PR_GROUP_LABEL_ENABLED: ${{ steps.global-config.outputs.follow_up_pr_group_label_enabled }}

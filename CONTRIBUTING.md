@@ -24,18 +24,28 @@ After you update code, you have to run the following things.
 - Format code
 - Update [JSON Schema](schema) and [document](https://suzuki-shunsuke.github.io/tfaction/docs/)
 
-## Build TypeScript
+## Node.js version management
 
-```sh
-npm run build
-```
+This project depends on Node.js, and there are a lot of Node.js version managers.
+This project supports a lot of Node.js version managers.
 
-Build all JavaScript Actions.
-If you update [lib](lib), you have to run this command.
+- [aqua](https://aquaproj.github.io/): [aqua/node.yaml](aqua/node.yaml)
+- [NVM](https://github.com/nvm-sh/nvm): [.nvmrc](.nvmrc)
+- [.node-version](.node-version): https://github.com/shadowspawn/node-version-usage
+  - asdf, mise, fnm, nodeenv, etc
+- [volta](https://volta.sh/): [package.json](package.json)
 
-```sh
-cmdx build
-```
+These versions must be same.
+
+## Node.js package manager
+
+We manage Node.js packages using npm, not [yarn](https://yarnpkg.com/) and [pnpm](https://pnpm.io/).
+
+## `dist` directories aren't committed
+
+[#1913](https://github.com/suzuki-shunsuke/tfaction/pull/1913)
+
+We don't manage transpiled JavaScript files in the main branch and feature branches anymore.
 
 ## Test JavaScript Actions
 
